@@ -2,12 +2,12 @@ Summary:	English-Spanish language pair for Apertium
 Summary(pl.UTF-8):	Para języków angielski-hiszpański dla Apertium
 %define	lpair	en-es
 Name:		apertium-dict-%{lpair}
-Version:	0.7.1
+Version:	0.8.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://downloads.sourceforge.net/apertium/apertium-%{lpair}-%{version}.tar.gz
-# Source0-md5:	77484d9351dfccc6a93d7197f43e5d58
+# Source0-md5:	4b82c32edbd5315432192799ed641930
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.apertium.org/
 BuildRequires:	apertium-devel >= 3.2.0
@@ -47,9 +47,6 @@ install -d $RPM_BUILD_ROOT%{_datadir}/apertium/modes
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# not needed here (see modes subdir) and contain wrong (builddir) paths
-%{__rm} $RPM_BUILD_ROOT%{_datadir}/apertium/apertium-%{lpair}/*.mode
 
 %clean
 rm -rf $RPM_BUILD_ROOT

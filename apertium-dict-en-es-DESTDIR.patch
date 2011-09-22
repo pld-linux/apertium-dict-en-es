@@ -1,6 +1,14 @@
---- apertium-en-es-0.7.1/Makefile.am.orig	2010-02-23 14:55:01.000000000 +0100
-+++ apertium-en-es-0.7.1/Makefile.am	2010-12-05 20:20:12.130121936 +0100
-@@ -203,13 +203,13 @@
+--- apertium-en-es-0.8.0/Makefile.am.orig	2011-08-03 20:20:35.000000000 +0200
++++ apertium-en-es-0.8.0/Makefile.am	2011-09-22 17:46:05.963019222 +0200
+@@ -182,7 +182,6 @@
+ 		    $(PREFIX2).t1x.bin $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
+ 	            $(BASENAME).$(PREFIX1).genitive.t1x \
+ 		    $(PREFIX1).genitive.bin  \
+-		    $(PREFIX1).mode $(PREFIX2).mode \
+ 		    $(BASENAME).$(LANG1)-lextor.dix $(BASENAME).$(LANG2)-lextor.dix \
+ 		    $(BASENAME).$(PREFIX1)-lextor.dix $(BASENAME).$(PREFIX2)-lextor.dix
+ 
+@@ -207,13 +206,13 @@
  
  install-data-local:
  	apertium-gen-modes modes.xml apertium-$(PREFIX1)
